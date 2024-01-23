@@ -8,7 +8,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Scaffold(
       appBar: AppBar(
-        title: Text('MajlisGram'),
+        title: const Text('MajlisGram'),
       ),
       body: Center(
         child: Column(
@@ -18,14 +18,14 @@ class HomeScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.pushNamed(context, '/signup');
               },
-              child: Text('Sign Up'),
+              child: const Text('Sign Up'),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
                 Navigator.pushNamed(context, '/signin');
               },
-              child: Text('Sign In'),
+              child: const Text('Sign In'),
             ),
           ],
         ),

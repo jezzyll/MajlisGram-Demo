@@ -13,28 +13,28 @@ class _WelcomePageState extends State<WelcomePage> {
   final FirebaseAuth _auth = FirebaseAuth.instance;
   @override
   Widget build(BuildContext context) {
-    String? _email = _auth.currentUser!.email;
+    String? email = _auth.currentUser!.email;
     return Scaffold(
-      appBar: AppBar(title: Text("Dashboard"),),
+      appBar: AppBar(title: const Text("Dashboard"),),
       body: Center(
-        child: Padding(padding: EdgeInsets.all(16),
+        child: Padding(padding: const EdgeInsets.all(16),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("Logged In with: $_email"),
-            SizedBox(height: 50,),
+            Text("Logged In with: $email"),
+            const SizedBox(height: 50,),
              ElevatedButton(
                 onPressed: (){
                   _auth.signOut();
                   Navigator.push(
                     context, MaterialPageRoute(
                       builder: (ctx){
-                        return LoginScreen();
+                        return const LoginScreen();
                         }
                         )
                         );
 
-                }, child: Text("Sign Out"),
+                }, child: const Text("Sign Out"),
                 
                 )
           ],

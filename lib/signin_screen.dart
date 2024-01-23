@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously, avoid_print
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_111/welcome.dart';
@@ -12,8 +14,8 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final GlobalKey<FormState> _formkey =GlobalKey<FormState>();
-  TextEditingController _emailController =TextEditingController();
-  TextEditingController _passController =TextEditingController();
+  final TextEditingController _emailController =TextEditingController();
+  final TextEditingController _passController =TextEditingController();
 
   String _email = "";
   String _password = "";
@@ -28,7 +30,7 @@ class _LoginScreenState extends State<LoginScreen> {
         Navigator.push(
                     context, MaterialPageRoute(
                       builder: (ctx){
-                        return WelcomePage();
+                        return const WelcomePage();
                         }
                         )
                         );
@@ -41,12 +43,12 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Login"),
+        title: const Text("Login"),
       ),
 
       body: Center(
         child: Padding(
-          padding: EdgeInsets.all(16),
+          padding: const EdgeInsets.all(16),
         child: Form(
           key: _formkey,
           child: Column(
@@ -55,7 +57,7 @@ class _LoginScreenState extends State<LoginScreen> {
               TextFormField(
                 controller: _emailController,
                 keyboardType: TextInputType.emailAddress,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   border: OutlineInputBorder(),
                   labelText: "Email"
                 ),
@@ -70,12 +72,12 @@ class _LoginScreenState extends State<LoginScreen> {
                 }
               ),
 
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
 
               TextFormField(
                 controller: _passController,
                 keyboardType: TextInputType.emailAddress,
-                decoration: InputDecoration(  
+                decoration: const InputDecoration(  
                   border: OutlineInputBorder(),
                   labelText: "Password"
                 ),
@@ -89,7 +91,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   setState((){ _password=value;});
                 }
               ),
-              SizedBox(height: 20,),
+              const SizedBox(height: 20,),
 
               ElevatedButton(
                 onPressed: (){
@@ -98,7 +100,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   }
 
                 }, child: 
-                Text("Login")
+                const Text("Login")
                 )
             ],
             ),

@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print, use_build_context_synchronously
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_111/signedup_screen.dart';
@@ -12,8 +14,8 @@ class SignUpScreen extends StatefulWidget {
 class _SignUpScreenState extends State<SignUpScreen> {
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final GlobalKey<FormState> _formkey =GlobalKey<FormState>();
-  TextEditingController _emailController =TextEditingController();
-  TextEditingController _passController =TextEditingController();
+  final TextEditingController _emailController =TextEditingController();
+  final TextEditingController _passController =TextEditingController();
 
   String _email = "";
   String _password = "";
@@ -29,7 +31,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(
-            builder: (context) => SignedUpScreen(),
+            builder: (context) => const SignedUpScreen(),
           ),
         );
       }
@@ -42,12 +44,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Sign Up"),
+        title: const Text("Sign Up"),
       ),
 
       body: Center(
         child: Padding(
-          padding: EdgeInsets.all(16),
+          padding: const EdgeInsets.all(16),
         child: Form(
           key: _formkey,
           child: Column(
@@ -56,7 +58,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               TextFormField(
                 controller: _emailController,
                 keyboardType: TextInputType.emailAddress,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   border: OutlineInputBorder(),
                   labelText: "Email"
                 ),
@@ -71,12 +73,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 }
               ),
 
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
 
               TextFormField(
                 controller: _passController,
                 keyboardType: TextInputType.emailAddress,
-                decoration: InputDecoration(  
+                decoration: const InputDecoration(  
                   border: OutlineInputBorder(),
                   labelText: "Password"
                 ),
@@ -90,7 +92,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   setState((){ _password=value;});
                 }
               ),
-              SizedBox(height: 20,),
+              const SizedBox(height: 20,),
 
               ElevatedButton(
                 onPressed: (){
@@ -99,7 +101,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   }
 
                 }, child: 
-                Text("Sign Up")
+                const Text("Sign Up")
                 )
             ],
             ),

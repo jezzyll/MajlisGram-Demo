@@ -14,29 +14,29 @@ class _SignedUpScreenState extends State<SignedUpScreen> {
 
   @override
   Widget build(BuildContext context) {
-     String? _email = _auth.currentUser!.email;
+     String? email = _auth.currentUser!.email;
     return Scaffold(
       appBar: AppBar(
-        title: Text("You Are In"),
+        title: const Text("You Are In"),
       ),
       body: Center(
-        child: Padding(padding: EdgeInsets.all(16),
+        child: Padding(padding: const EdgeInsets.all(16),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("Registered Successfully with: $_email"),
-            SizedBox(height: 50,),
+            Text("Registered Successfully with: $email"),
+            const SizedBox(height: 50,),
              ElevatedButton(
                 onPressed: (){
                   Navigator.push(
                     context, MaterialPageRoute(
                       builder: (ctx){
-                        return LoginScreen();
+                        return const LoginScreen();
                         }
                         )
                         );
 
-                }, child: Text("Sign In"),
+                }, child: const Text("Sign In"),
                 
                 )
           ],
