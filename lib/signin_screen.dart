@@ -55,7 +55,7 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                CustomTextInput(
+                MajilisTextField(
                   prefixWidget: const Icon(Icons.email),
                   controller: _emailController,
                   keyboardType: TextInputType.emailAddress,
@@ -73,7 +73,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   },
                 ),
                 const SizedBox(height: 20),
-                CustomTextInput(
+                MajilisTextField(
                   prefixWidget: const Icon(Icons.lock),
                   suffixIcon: Icons.visibility,
                   controller: _passController,

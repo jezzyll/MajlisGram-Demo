@@ -56,8 +56,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                // Replace TextFormField with CustomTextInput
-                CustomTextInput(
+                // Replace TextFormField with MajilisTextField
+                MajilisTextField(
                   prefixWidget: const Icon(Icons.email),
                   controller: _emailController,
                   keyboardType: TextInputType.emailAddress,
@@ -75,8 +75,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   },
                 ),
                 const SizedBox(height: 20),
-                // Replace TextFormField with CustomTextInput
-                CustomTextInput(
+                // Replace TextFormField with MajilisTextField
+                MajilisTextField(
                   prefixWidget: const Icon(Icons.lock),
                   suffixIcon: Icons.visibility_off,
                   controller: _passController,

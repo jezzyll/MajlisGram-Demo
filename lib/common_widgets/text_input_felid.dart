@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_application_111/common_widgets/color.dart';
 
-class CustomTextInput extends StatelessWidget {
+class MajilisTextField extends StatelessWidget {
   final void Function(String)? onChanged;
   final String? labelText;
   final IconData? suffixIcon;
@@ -33,7 +33,7 @@ class CustomTextInput extends StatelessWidget {
   final String? Function(String?)? validator;
   final double? width;
 
-  const CustomTextInput({super.key, this.enableBorder, this.focusBorder, this.onTap, this.borderSize, this.onSubmitted, this.onChanged, this.fillColor, this.initialValue, this.hintText, this.labelText, this.helperText, this.suffixIcon, this.suffixWidget, this.isPassword = false, this.keyboardType, this.enabled = true, this.controller, this.focusNode, this.inputFormatters, this.autofillHints, this.prefixWidget, this.borderRadius, this.contentPadding, this.capitalize, this.padding, this.maxLines = 1, this.maxLength, bool? obscureText, this.validator, this.width});
+  const MajilisTextField({super.key, this.enableBorder, this.focusBorder, this.onTap, this.borderSize, this.onSubmitted, this.onChanged, this.fillColor, this.initialValue, this.hintText, this.labelText, this.helperText, this.suffixIcon, this.suffixWidget, this.isPassword = false, this.keyboardType, this.enabled = true, this.controller, this.focusNode, this.inputFormatters, this.autofillHints, this.prefixWidget, this.borderRadius, this.contentPadding, this.capitalize, this.padding, this.maxLines = 1, this.maxLength, bool? obscureText, this.validator, this.width});
 
   @override
   Widget build(BuildContext context) {
