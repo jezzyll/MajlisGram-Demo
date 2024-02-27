@@ -1,7 +1,6 @@
 # MajlisGram - College Management App
 
 
-
 MajlisGram is a powerful and user-friendly college management app built with Flutter and Firebase. This app simplifies the process of managing student information, providing a seamless experience for both administrators and students. The integration of Flutter for the frontend and Firebase for the backend ensures a robust and scalable solution.(Flutter application-111)
 
 # Features
